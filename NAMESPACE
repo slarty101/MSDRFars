@@ -1,0 +1,8 @@
+export("MSDRFars")
+importFrom("readr", "read_csv")
+importFrom("dplyr", "tbl_df", "mutate", "select", "bind_rows", "group_by", "summarize")
+importFrom("magrittr", "%>%")
+importFrom("tidyr", "spread")
+importFrom("maps", "map")
+importFrom("graphics", "points")
+

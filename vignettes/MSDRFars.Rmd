@@ -1,0 +1,113 @@
+---
+title: "MSDRFars"
+author: "Simon west"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+##Introduction
+
+This vignette provides a tutorial for the MSDRFars package. 
+
+The MSDRFars package contains 5 functions that load, manipulate, summarize and plot data taken from the 
+US National Highway Traffic Safety Administration's [Fatality Analysis Reporting System](https://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS)). 
+
+The functions are: (data loading) make_filename, fars_read, fars_read_years, (data summary) fars_summarize_years & (data plot) fars_map_state.
+
+These function are contained in 3 files, fars_data_load.R, fars_summarize_data.r & fars_plot_data.r.
+
+The package also contains raw data that can be imported by the data load functions. The data has been provided by Coursera: [Data](https://d3c33hcgiwev3.cloudfront.net/_e1adac2a5f05192dc8780f3944feec13_fars_data.zip?Expires=1524960000&Signature=NXHupBg-gcvZzp0GLhXufqChLvchI4-EJ9ixVfEN9NSk3SAKfTc0uhkYVBnZAcSXbxwicOVgl3T3zriG~CHVncI59bWZyYz0ys8tMfvI5VQmAvFeywBg8rzWsjxduRWDi7DaNGS8WLTyucTi3UT9SLNV0GRaiw0IndPcEFwgo-8_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+ 
+## Usage
+The data associate with this package is held inst/extdata which will be /extdata when the package is installed. Set your working directory to be "current directory"/extdata once the MSDRFars package is installed to access the raw data fles.
+
+### Loading the raw data files (make_filename, fars_read, fars_read_years)
+
+
+#```{r get filepath and set working directory}
+#file_path <- system.file("extdata","accident_2013.csv.bz2", package = "MSDRFars")
+
+#setwd(file_path)
+
+#```
+ 
+
+```{r make_filename function}
+
+#make_filename(2013)
+
+```
+
+```{r fars_read function}
+# fars_read("accident_2013.csv.bz2")
+```
+
+```{r fars_read_years function}
+# fars_read_years(c(2013:2015))
+```
+
+
+### Using the summary function (fars_summarize_years)
+
+
+```{r}
+#fars_summarize_years(c(2013:2015))
+```
+
+### Plotting the data (fars_map_state)
+```{r}
+# fars_map_state(12, 2014)
+```
+
+
+## Vignette Info
+
+Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
+
+## Styles
+
+The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
+
+    output: 
+      rmarkdown::html_vignette:
+        css: mystyles.css
+
+## Figures
+
+The figure sizes have been customised so that you can easily put two images side-by-side. 
+
+```{r, fig.show='hold'}
+plot(1:10)
+plot(10:1)
+```
+
+You can enable figure captions by `fig_caption: yes` in YAML:
+
+    output:
+      rmarkdown::html_vignette:
+        fig_caption: yes
+
+Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
+
+## More Examples
+
+You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
+
+```{r, echo=FALSE, results='asis'}
+knitr::kable(head(mtcars, 10))
+```
+
+Also a quote using `>`:
+
+> "He who gives up [code] safety for [code] speed deserves neither."
+([via](https://twitter.com/hadleywickham/status/504368538874703872))
