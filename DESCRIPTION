@@ -2,6 +2,7 @@ Package: MSDRFars
 Type: Package
 Title: Mastering Software Development in R - FARS analysis package
 Version: 0.1.0
+Author: Simon West <slarty101@gmail.com>
 Maintainer: Simon West <slarty101@gmail.com>
 Description: These functions read in data taken from the US National Highway Traffic Safety Administration's
     Fatality Analysis Reporting System (FARS), summarize and plot accident data by state on png formatted maps.
@@ -11,3 +12,4 @@ LazyData: true
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
+RoxygenNote: 6.0.1
