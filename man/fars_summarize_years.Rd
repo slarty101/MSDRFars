@@ -26,7 +26,7 @@ The fars_data_load functions (make_filename, fars_read & fars_read_years) import
 fars_summarize_years(2013)
 
 Error conditions: Years where there are no data will result in error.
-\dontrun {fars_summarize_years(3100)}
+fars_summarize_years(3100)
 
 Error in grouped_df_impl(data, unname(vars), drop) :
 Column `year` is unknown

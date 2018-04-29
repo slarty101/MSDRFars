@@ -32,15 +32,16 @@ The package also contains raw data that can be imported by the data load functio
 ## Usage
 The data associate with this package is held inst/extdata which will be /extdata when the package is installed. Set your working directory to be "current directory"/extdata once the MSDRFars package is installed to access the raw data fles.
 
-### Loading the raw data files (make_filename, fars_read, fars_read_years)
+### Using the data loading functions (make_filename, fars_read, fars_read_years)
 
 
 ```{r get filepath and set working directory, echo=FALSE}
 #file_path <- system.file("extdata","accident_2013.csv.bz2", package = "MSDRFars")
-library(devtools)
+#library(devtools)
 #load_all(MSDRFars)
+library(magrittr)
 
-setwd("/home/sam/Coursera/DataScience/MSDR/3_Building_R_Packages/MSDRFars")
+#setwd("/home/sam/Coursera/DataScience/MSDR/3_Building_R_Packages/MSDRFars")
 
 ```
  
@@ -52,11 +53,11 @@ setwd("/home/sam/Coursera/DataScience/MSDR/3_Building_R_Packages/MSDRFars")
 ```
 
 ```{r fars_read function, echo=TRUE}
-# fars_read("accident_2013.csv.bz2")
+#fars_read("accident_2013.csv.bz2")
 ```
 
 ```{r fars_read_years function, echo=TRUE}
-# fars_read_years(c(2013:2015))
+#fars_read_years(c(2013:2015))
 ```
 
 
@@ -67,23 +68,12 @@ setwd("/home/sam/Coursera/DataScience/MSDR/3_Building_R_Packages/MSDRFars")
 #fars_summarize_years(c(2013:2015))
 ```
 
-### Plotting the data (fars_map_state)
-```{r fars_map_state, echo=TRUE}
-# fars_map_state(12, 2014)
+### Using the data plotting function (fars_map_state)
+```{r fars_map_state, echo=TRUE, fig.cap = "Accident Plot for Florida 2014."}
+#fars_map_state(12, 2014)
 ```
 
 
-## Vignette Info
-
-Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
-
-## Styles
-
-The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
-
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
 
 ## Figures
 
@@ -93,24 +83,3 @@ The figure sizes have been customised so that you can easily put two images side
 plot(1:10)
 plot(10:1)
 ```
-
-You can enable figure captions by `fig_caption: yes` in YAML:
-
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
-
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
-```
-
-Also a quote using `>`:
-
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))

@@ -23,10 +23,13 @@ These functions read in data taken from the US National Highway Traffic Safety A
 }
 \examples{
 fars_read("directory/filename")
-fars_read("data/accident_2013.csv.bz2")
+
+fars_read("extdata/accident_2013.csv.bz2")
+
 
 Error conditions:
-\dontrun {fars_read(missing_file)}
+fars_read(missing_file)
+
 
 Incorrect filepath or missing file will result in "file 'filename' does not exist" error.
 

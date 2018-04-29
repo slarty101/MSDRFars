@@ -6,8 +6,8 @@
 #'
 #'@description Generates a map of the state selected with the accident locations plotted using the latitude & longitude data for #'the selected year
 #'
-#'@param years the year to be plotted
-#'@param state the state number to be used
+#'@param year the year to be plotted
+#'@param state.num the state number to be used
 #'
 #'@return a map of the selected state with the accident data plotted
 #'
@@ -18,13 +18,12 @@
 #'@examples
 #'fars_map_state(30, 2013)
 #'
-#'Error conditions:
-#'\dontrun {fars_map_state(3,2013)}
 #'
+#'Error conditions:
+#'fars_map_state(3,2013)
 #'> Error in fars_map_state(3, 2013) : invalid STATE number: 3
 #'
 #'@export
-#'
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)
   data <- fars_read(filename)

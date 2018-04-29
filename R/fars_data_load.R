@@ -18,10 +18,13 @@
 #'
 #'@examples
 #'fars_read("directory/filename")
-#'fars_read("data/accident_2013.csv.bz2")
+#'
+#'fars_read("extdata/accident_2013.csv.bz2")
+#'
 #'
 #'Error conditions:
-#'\dontrun {fars_read(missing_file)}
+#'fars_read(missing_file)
+#'
 #'
 #'Incorrect filepath or missing file will result in "file 'filename' does not exist" error.
 #'
@@ -46,16 +49,15 @@ fars_read <- function(filename) {
 #'@return character vector
 #'
 #'@examples
-#'> make_filename(2001)
+#'make_filename(2001)
 #'> "accident_2001.csv.bz2"
 #'
 #'Error conditions:
-#'\dontrun {make_filename(tulip)}
+#'make_filename(tulip)
 #'
 #'non numeric inputs will cause errors.
 #'
 #'@export
-#'
 
 make_filename <- function(year) {
   year <- as.integer(year)
@@ -66,7 +68,7 @@ make_filename <- function(year) {
 #'
 #'@description Reads the selected file into a dataframe then groups the data by year and month. Uses make_filename function to #'allow the user to select the year for the data rather than inputting the whole filename.
 #'
-#'@param years
+#'@param years year(s) to be summarized
 #'
 #'@return a dataframe with the data sorted by year and month.
 #'
@@ -74,17 +76,18 @@ make_filename <- function(year) {
 #'
 #'@examples
 #'fars_read_years(2013)
+#'fars_read_years(c(2013:2015))
 #'
 #'Error conditions: Invalid year will result in error.
-#'\dontrun {fars_read_years(2001)}
-#'[[1]]
+#'fars_read_years(2001)
+#'>[[1]]
 #'NULL
 #'
 #'Warning message:
 #'  In value[[3L]](cond) : invalid year: 2001
 #'
 #'@export
-#'
+
 fars_read_years <- function(years) {
   lapply(years, function(year) {
     file <- make_filename(year)

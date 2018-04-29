@@ -7,9 +7,9 @@
 fars_map_state(state.num, year)
 }
 \arguments{
-\item{years}{the year to be plotted}
+\item{state.num}{the state number to be used}
 
-\item{state}{the state number to be used}
+\item{year}{the year to be plotted}
 }
 \value{
 a map of the selected state with the accident data plotted
@@ -23,9 +23,9 @@ filename: fars_plot_data.R
 \examples{
 fars_map_state(30, 2013)
 
-Error conditions:
-\dontrun {fars_map_state(3,2013)}
 
+Error conditions:
+fars_map_state(3,2013)
 > Error in fars_map_state(3, 2013) : invalid STATE number: 3
 
 }

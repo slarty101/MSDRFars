@@ -7,7 +7,7 @@
 fars_read_years(years)
 }
 \arguments{
-\item{years}{}
+\item{years}{year(s) to be summarized}
 }
 \value{
 a dataframe with the data sorted by year and month.
@@ -17,10 +17,11 @@ Reads the selected file into a dataframe then groups the data by year and month.
 }
 \examples{
 fars_read_years(2013)
+fars_read_years(c(2013:2015))
 
 Error conditions: Invalid year will result in error.
-\dontrun {fars_read_years(2001)}
-[[1]]
+fars_read_years(2001)
+>[[1]]
 NULL
 
 Warning message:

@@ -17,11 +17,11 @@ Helper function. Reads input, converts it to an interger and then creates a char
 the input value to use as a filename using the sprintf function.
 }
 \examples{
-> make_filename(2001)
+make_filename(2001)
 > "accident_2001.csv.bz2"
 
 Error conditions:
-\dontrun {make_filename(tulip)}
+make_filename(tulip)
 
 non numeric inputs will cause errors.
 
