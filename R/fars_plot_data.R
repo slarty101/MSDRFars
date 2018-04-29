@@ -16,8 +16,9 @@
 #'@importFrom graphics points
 #'
 #'@examples
+#'/dontrun{
 #'fars_map_state(30, 2013)
-#'
+#'}
 #'Error conditions:
 #'fars_map_state(3,2013)
 #'> Error in fars_map_state(3, 2013) : invalid STATE number: 3
