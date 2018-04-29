@@ -6,7 +6,7 @@ Install the latest version of this package by entering the following in R:
 * library(devtools)
 * install_github("slarty101/MSDRFars")
 
-Travis Status badge: https://travis-ci.org/slarty101/MSDRFars.svg?branch=master
+[![Build Status](https://travis-ci.org/slarty101/MSDRFars.svg?branch=master)](https://travis-ci.org/slarty101/MSDRFars)
 
 Notes:
 * I've spent about 3 days trying to get the vignette to work properly without any joy.
