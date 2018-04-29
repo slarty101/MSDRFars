@@ -6,7 +6,8 @@ Install the latest version of this package by entering the following in R:
 * library(devtools)
 * install_github("slarty101/MSDRFars")
 
+Travis Status badge: https://travis-ci.org/slarty101/MSDRFars.svg?branch=master
+
 Notes:
 * I've spent about 3 days trying to get the vignette to work properly without any joy.
-* There's a parse error when I check the build on Travis in a file called 'MSDRFars_Ex.R' which seems to be an unsaved temp file so no badge.
-* Both of these issues seem to be related to the fact that I'm trying to include the data files to run the functions.
+* This issue seems to be related to the fact that I'm trying to include the data files to run the functions.
