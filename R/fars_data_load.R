@@ -17,19 +17,11 @@
 #'@importFrom dplyr tbl_df
 #'
 #'@examples
-#'fars_read("directory/filename")
-#'
+#'\dontrun{
 #'fars_read("extdata/accident_2013.csv.bz2")
-#'
-#'
-#'Error conditions:
-#'fars_read(missing_file)
-#'
-#'
-#'Incorrect filepath or missing file will result in "file 'filename' does not exist" error.
-#'
+#'}
 #'@export
-#'
+
 fars_read <- function(filename) {
   if(!file.exists(filename))
     stop("file '", filename, "' does not exist")
@@ -49,14 +41,9 @@ fars_read <- function(filename) {
 #'@return character vector
 #'
 #'@examples
+#'\dontrun{
 #'make_filename(2001)
-#'> "accident_2001.csv.bz2"
-#'
-#'Error conditions:
-#'make_filename(tulip)
-#'
-#'non numeric inputs will cause errors.
-#'
+#'}
 #'@export
 
 make_filename <- function(year) {
@@ -76,17 +63,12 @@ make_filename <- function(year) {
 #'@importFrom magrittr %>%
 #'
 #'@examples
+#'\dontrun{
 #'fars_read_years(2013)
+#'}
+#'\dontrun{
 #'fars_read_years(c(2013:2015))
-#'
-#'Error conditions: Invalid year will result in error.
-#'fars_read_years(2001)
-#'>[[1]]
-#'NULL
-#'
-#'Warning message:
-#'  In value[[3L]](cond) : invalid year: 2001
-#'
+#'}
 #'@export
 
 fars_read_years <- function(years) {

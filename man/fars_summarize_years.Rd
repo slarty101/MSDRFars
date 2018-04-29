@@ -23,12 +23,7 @@ This function summarises data taken from the US National Highway Traffic Safety 
 The fars_data_load functions (make_filename, fars_read & fars_read_years) import the data.
 }
 \examples{
+\dontrun{
 fars_summarize_years(2013)
-
-Error conditions: Years where there are no data will result in error.
-fars_summarize_years(3100)
-
-Error in grouped_df_impl(data, unname(vars), drop) :
-Column `year` is unknown
-
+}
 }

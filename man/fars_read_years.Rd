@@ -16,15 +16,10 @@ a dataframe with the data sorted by year and month.
 Reads the selected file into a dataframe then groups the data by year and month. Uses make_filename function to #'allow the user to select the year for the data rather than inputting the whole filename.
 }
 \examples{
+\dontrun{
 fars_read_years(2013)
+}
+\dontrun{
 fars_read_years(c(2013:2015))
-
-Error conditions: Invalid year will result in error.
-fars_read_years(2001)
->[[1]]
-NULL
-
-Warning message:
- In value[[3L]](cond) : invalid year: 2001
-
+}
 }

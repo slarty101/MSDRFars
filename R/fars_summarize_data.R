@@ -19,14 +19,9 @@
 #'@importFrom tidyr spread
 #'
 #'@examples
+#'\dontrun{
 #'fars_summarize_years(2013)
-#'
-#'Error conditions: Years where there are no data will result in error.
-#'fars_summarize_years(3100)
-#'
-#'Error in grouped_df_impl(data, unname(vars), drop) :
-#'Column `year` is unknown
-#'
+#'}
 #'@export
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)

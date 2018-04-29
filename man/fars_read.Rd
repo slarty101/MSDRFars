@@ -22,15 +22,7 @@ These functions read in data taken from the US National Highway Traffic Safety A
 [Fatality Analysis Reporting System](https://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS)).
 }
 \examples{
-fars_read("directory/filename")
-
+\dontrun{
 fars_read("extdata/accident_2013.csv.bz2")
-
-
-Error conditions:
-fars_read(missing_file)
-
-
-Incorrect filepath or missing file will result in "file 'filename' does not exist" error.
-
+}
 }
