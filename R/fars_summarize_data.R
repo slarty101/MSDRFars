@@ -15,6 +15,7 @@
 #'@return A list of integers representing the months and accident counts for the selected year.
 #'
 #'@importFrom dplyr bind_rows group_by summarize
+#'@importFrom magrittr %>%
 #'@importFrom tidyr spread
 #'
 #'@examples

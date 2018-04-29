@@ -73,6 +73,7 @@ make_filename <- function(year) {
 #'@return a dataframe with the data sorted by year and month.
 #'
 #'@importFrom dplyr mutate select
+#'@importFrom magrittr %>%
 #'
 #'@examples
 #'fars_read_years(2013)
